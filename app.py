@@ -26,8 +26,16 @@ colors = {'bg':'#000000',
          'elem_bg':'#2e2e2e',
          'letter':'#ffffff'}
 font = {'family':'system-ui'}
-
-app = dash.Dash(show_undo_redo=False)
+#
+PORT = 8050
+app = dash.Dash(
+    __name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
+)
+server = app.server
+app.title = 'Meteo-Panama'
+app.config.suppress_callback_exceptions = True
+#
+#app = dash.Dash(show_undo_redo=False)
 mapbox_access_token = 'pk.eyJ1IjoibWFydGFub2luZXJjaWFsIiwiYSI6ImNrdXdwNXRxczJydWkydnFydWhuZTAybTMifQ.dTpq64f-nPO3L1GLmla9Aw'
 px.set_mapbox_access_token(mapbox_access_token)
 
@@ -401,4 +409,13 @@ def callback_graph(hoverData):
                                html.Br(),html.H4(' ')])
     return figure, precip, intens, precip2, intens2, lats, lons
 
-app.run_server(debug=False)
+#app.run_server(debug=False)
+if __name__ == "__main__":
+    
+    # Display app start
+    logger.error('*' * 80)
+    logger.error('App initialisation')
+    logger.error('*' * 80)
+
+    # Starting flask server
+    app.run_server(debug=True, port=PORT)
