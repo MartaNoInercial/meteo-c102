@@ -27,7 +27,6 @@ colors = {'bg':'#000000',
          'letter':'#ffffff'}
 font = {'family':'system-ui'}
 #
-PORT = 8050
 app = dash.Dash(
     __name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
 )
@@ -418,4 +417,4 @@ if __name__ == "__main__":
     logger.error('*' * 80)
 
     # Starting flask server
-    app.run_server(debug=True, port=PORT)
+    app.run_server(debug=True)
