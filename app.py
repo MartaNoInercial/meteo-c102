@@ -401,4 +401,4 @@ def callback_graph(hoverData):
                                html.Br(),html.H4(' ')])
     return figure, precip, intens, precip2, intens2, lats, lons
 
-app.run_server(debug=False)
+#app.run_server(debug=False)
