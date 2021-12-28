@@ -29,12 +29,12 @@ colors = {'bg':'#000000',
          'letter':'#ffffff'}
 font = {'family':'system-ui'}
 #
-app = dash.Dash(
-    __name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
-)
+#app = dash.Dash(
+ #   __name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
+#)
 server = app.server
 app.title = 'Meteo-Panama'
-app.config.suppress_callback_exceptions = True
+#app.config.suppress_callback_exceptions = True
 #
 #app = dash.Dash(show_undo_redo=False)
 mapbox_access_token = 'pk.eyJ1IjoibWFydGFub2luZXJjaWFsIiwiYSI6ImNrdXdwNXRxczJydWkydnFydWhuZTAybTMifQ.dTpq64f-nPO3L1GLmla9Aw'
