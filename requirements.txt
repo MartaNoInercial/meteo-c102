@@ -1,4 +1,4 @@
-gunicorn==20.0.4
+gunicorn
 affine==2.3.0
 aiohttp @ file:///D:/bld/aiohttp_1637087223487/work
 aiosignal @ file:///home/conda/feedstock_root/build_artifacts/aiosignal_1636093929600/work
