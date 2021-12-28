@@ -15,6 +15,8 @@ import json
 import warnings
 warnings.filterwarnings('ignore')
 
+app = dash.Dash()
+
 df = pd.read_csv('../data/01x01.csv')
 
 list_time = list(dict.fromkeys(list((df.Time))))
